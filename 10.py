@@ -1,0 +1,16 @@
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+class Employee(Person):
+
+    def __init__(self, name, age, employee_id):
+        super().__init__(name, age)
+        self.employee_id = employee_id
+
+    def get_info(self):
+        return f"{self.name}, {self.age} years old, works at  {self.employee_id}"
+
+my_employee = Employee("Hasan", 25, "Google")
+print(my_employee.get_info())
